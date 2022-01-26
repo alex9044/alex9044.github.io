@@ -4,6 +4,7 @@ import { Todo } from './todo';
 import { Observable } from 'rxjs';
 //HttpClient: Classe para usar serviços client HTTP
 import { HttpClient } from '@angular/common/http';
+import{ environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class TodoService {
   
   //Url da api 
-  apiUrl: string = 'http://localhost:8080/api/todos';
+  apiUrl: string = environment.apiURL;
 
   constructor(
     //Injeção de serviço, inicializa a clase
